@@ -1,4 +1,4 @@
-from matrix.matrix_operation import MatrixOperation
+from src.matrix_operation import MatrixOperation
 import ast
 
 

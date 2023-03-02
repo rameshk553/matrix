@@ -1,6 +1,6 @@
 import unittest
 from hamcrest import assert_that, equal_to, instance_of
-from matrix.matrix import Matrix
+from src.matrix import Matrix
 
 class TestMatrix(unittest.TestCase):
     def setUp(self):

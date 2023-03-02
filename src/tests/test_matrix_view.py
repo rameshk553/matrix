@@ -1,8 +1,8 @@
 import unittest
 import mock
 from hamcrest import assert_that, equal_to
-from matrix.matrix_view import MatrixView
-from matrix.matrix_operation import MatrixOperation
+from src.matrix_view import MatrixView
+from src.matrix_operation import MatrixOperation
 
 class TestMatrixView(unittest.TestCase):
 

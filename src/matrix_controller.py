@@ -1,5 +1,5 @@
-from matrix.matrix import Matrix
-from matrix.matrix_view import MatrixView
+from src.matrix import Matrix
+from src.matrix_view import MatrixView
 
 
 class MatrixController:

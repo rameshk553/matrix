@@ -1,7 +1,7 @@
 import unittest
 from unittest import mock
 from hamcrest import assert_that, equal_to
-from matrix.matrix_controller import MatrixController
+from src.matrix_controller import MatrixController
 
 
 class TestMatrixController(unittest.TestCase):
