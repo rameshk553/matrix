@@ -1,4 +1,3 @@
-
 class Matrix:
     def add(self, matrix1, matrix2):
         try:
@@ -13,5 +12,3 @@ class Matrix:
             return result
         except TypeError as e:
             return str(e)
-
-

@@ -13,4 +13,3 @@ class MatrixController:
     def add(self, matrix1, matrix2):
         result = self._model.add(matrix1, matrix2)
         self._view.display(result)
-

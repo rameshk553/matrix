@@ -25,7 +25,10 @@ class TestMatrixController(unittest.TestCase):
 
         self.controller.add(matrix1, matrix2)
 
-        assert_that(str(self.mock_view.display.call_args[0][0]), equal_to("Matrices are not of the same dimensions"))
+        assert_that(
+            str(self.mock_view.display.call_args[0][0]),
+            equal_to("Matrices are not of the same dimensions"),
+        )
 
     def test_start_starts_the_matrix_view(self):
         self.controller.start()

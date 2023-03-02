@@ -2,6 +2,7 @@ import unittest
 from hamcrest import assert_that, equal_to, instance_of
 from src.matrix import Matrix
 
+
 class TestMatrix(unittest.TestCase):
     def setUp(self):
         self.matrix = Matrix()
@@ -24,7 +25,7 @@ class TestMatrix(unittest.TestCase):
 
     def test_add_returns_type_error_when_matrices_are_of_different_type(self):
         matrix1 = [[1, 2], [3, 4]]
-        matrix2 = [['a', 'b'], [7, 8]]
+        matrix2 = [["a", "b"], [7, 8]]
         expected_result = "unsupported operand type(s) for +: 'int' and 'str'"
 
         result = self.matrix.add(matrix1, matrix2)

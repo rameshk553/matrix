@@ -21,7 +21,8 @@ class MatrixView:
                 "Enter the number corresponding to a matrix operation:\n "
                 "1 - Addition, "
                 "2 - Multiplication, "
-                "3 - Inverse:\n ")
+                "3 - Inverse:\n "
+            )
             try:
                 user_input = int(user_input)
                 if user_input in [1, 2, 3]:
@@ -48,9 +49,11 @@ class MatrixView:
     def _get_matrix_data(number):
         data = None
         while True:
-            user_input = input(f"Enter matrix {number} data:\n"
-                               "Example: For creating a 2x3 matrix, please type: \n"
-                               "[[1,2,3],[4,5,6]]\n")
+            user_input = input(
+                f"Enter matrix {number} data:\n"
+                "Example: For creating a 2x3 matrix, please type: \n"
+                "[[1,2,3],[4,5,6]]\n"
+            )
             try:
                 result = ast.literal_eval(user_input)
                 if isinstance(result, list):
