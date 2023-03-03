@@ -1,6 +1,6 @@
-import mock
 import unittest
 
+import mock
 from hamcrest import assert_that, equal_to
 from src.matrix_operation import MatrixOperation
 from src.matrix_view import MatrixView
