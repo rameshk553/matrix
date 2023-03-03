@@ -1,5 +1,5 @@
-from src.matrix_operation import MatrixOperation
 import ast
+from src.matrix_operation import MatrixOperation
 
 
 class MatrixView:
