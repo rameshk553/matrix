@@ -1,8 +1,10 @@
 import mock
 import unittest
+
 from hamcrest import assert_that, equal_to
 from src.matrix_operation import MatrixOperation
 from src.matrix_view import MatrixView
+
 
 class TestMatrixView(unittest.TestCase):
     def setUp(self):

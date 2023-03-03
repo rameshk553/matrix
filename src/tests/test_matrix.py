@@ -1,4 +1,5 @@
 import unittest
+
 from hamcrest import assert_that, equal_to, instance_of
 from src.matrix import Matrix
 
