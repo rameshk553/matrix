@@ -20,18 +20,18 @@ class TestMatrixView(unittest.TestCase):
         self.assertEqual(result, MatrixOperation.ADDITION)
 
     def test_select_operation_prints_a_message_when_input_is_invalid(self):
-        with mock.patch("builtins.input", side_effect=[4, 1]):
+        with mock.patch("builtins.input", side_effect=["4", "1"]):
             with mock.patch("builtins.print") as mock_print:
                 _ = self.view.select_operation()
 
         mock_print.assert_called_once_with("Enter a value between 1 and 3")
 
-    def test_select_operation_prints_value_error_message_when_input_is_a_letter(self):
-        with mock.patch("builtins.input", side_effect=["a", 1]):
+    def test_select_operation_prints_value_error_message_when_input_is_a_string(self):
+        with mock.patch("builtins.input", side_effect=["rm", "1"]):
             with mock.patch("builtins.print") as mock_print:
                 _ = self.view.select_operation()
 
-        mock_print.assert_called_once_with("Value error")
+        mock_print.assert_called_once_with("Invalid input, enter a valid integer")
 
     def test_create_matrix_calls_for_user_input_twice_when_matrix_addition_operation_selected(
         self,
@@ -53,7 +53,7 @@ class TestMatrixView(unittest.TestCase):
         with mock.patch(
             "builtins.input",
             side_effect=[
-                [[1, 2], [3, 4]],
+                "rm -rf",
                 "[[5,6],[7,8]]",
                 "[[5,6],[7,8]]",
                 "[[5,6],[7,8]]",
