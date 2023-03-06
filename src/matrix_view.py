@@ -12,14 +12,16 @@ class MatrixView:
         self.operations = {
             MatrixOperation.ADDITION: self._create_addition_matrix,
             MatrixOperation.MULTIPLICATION: self._create_multiplication_matrix,
-            MatrixOperation.INVERSE: self._create_inverse_matrix
+            MatrixOperation.INVERSE: self._create_inverse_matrix,
         }
 
     def start(self):
         self._selected_operation = MatrixView.select_operation()
         self.create_matrix(self._selected_operation)
         if self._matrix1 is not None:
-            self.perform_operation(self._matrix1, self._matrix2, self._selected_operation)
+            self.perform_operation(
+                self._matrix1, self._matrix2, self._selected_operation
+            )
 
     @staticmethod
     def select_operation():

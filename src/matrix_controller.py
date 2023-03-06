@@ -13,4 +13,7 @@ class MatrixController:
         matrix1 = Matrix(matrix1)
         matrix2 = Matrix(matrix2)
         result = matrix1 + matrix2
-        self._view.display(result.values)
+        if isinstance(result, Matrix):
+            self._view.display(result.values)
+        else:
+            self._view.display(result)

@@ -5,7 +5,6 @@ from src.matrix import Matrix
 
 
 class TestMatrix(unittest.TestCase):
-
     def test_add_returns_addition_two_matrices(self):
         matrix1 = Matrix([[1, 2], [3, 4]])
         matrix2 = Matrix([[5, 6], [7, 8]])
