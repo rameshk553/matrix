@@ -1,14 +1,20 @@
 class Matrix:
-    def add(self, matrix1, matrix2):
+
+    def __init__(self, values):
+        self.values = values
+    def __add__(self, other):
         try:
-            if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):
+            if not isinstance(other, Matrix):
+                raise ValueError("Can only add matrices together")
+            if len(self.values) != len(other.values) or len(self.values[0]) != len(other.values[0]):
                 return ValueError("Matrices are not of the same dimensions")
             result = []
-            for i in range(len(matrix1)):
+            for i in range(len(self.values)):
                 row = []
-                for j in range(len(matrix1[0])):
-                    row.append(matrix1[i][j] + matrix2[i][j])
+                for j in range(len(self.values[0])):
+                    row.append(self.values[i][j] + other.values[i][j])
                 result.append(row)
-            return result
+
+            return Matrix(result)
         except TypeError as e:
             return str(e)
